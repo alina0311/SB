@@ -1,0 +1,30 @@
+.container-profile {
+
+	width: 100%;
+	height: 100vh;
+}
+
+.update-profile {
+	margin-left: 0rem;
+    margin-top: -0.5rem;
+}
+
+.btn-one {
+
+	padding: 0.2rem 0.2rem;
+	color: white;
+	text-decoration:none;
+	font-size: 1.2rem;
+	text-transform:uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:13rem;
+    height: 4rem;
+	padding-left: 3rem;
+	padding-right: 3rem;
+	position:absolute;
+    margin-left:  33%;
+    margin-top:  20%;
+	
+}

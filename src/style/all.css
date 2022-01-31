@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Poppins:wght@100;200&display=swap');
+
+.page-cont{
+    
+    font-family: 'Poppins', sans-serif;
+}
+
+.centered {
+    display: flex;
+    align-items: center;
+}
+
+
+.toLeft {
+    margin-left: 5%;
+}

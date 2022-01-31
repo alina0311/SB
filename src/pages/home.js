@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
+import Footer from "../components/footer";
+import Header from "../components/header";
+import '../style/all.css';
+import '../style/home.css';
 
 function Home() {
   const [error, setError] = useState("");
@@ -19,12 +23,15 @@ function Home() {
   };
 
   return (
-    <>
-      <div className="text-center w-100 mt-2">
-        <p>Welcome!</p>
+    <div className="alldiv home-cont"> 
+      <div className="left">
+        <p className="question">
+              ARE YOU READY TO HAVE FUN?
+        </p>
+        <Button href="#"></Button> <Button type="submit">LET'S START</Button>{' '}
       </div>
-    
-    </>
+      
+    </div>
   );
 }
 

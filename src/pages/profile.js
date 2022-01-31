@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Card, Button, Alert } from "react-bootstrap";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/authContext";
+import '../style/all.css';
+import '../style/profile.css';
 
 function Profile() {
   const [error, setError] = useState("");
@@ -20,21 +22,21 @@ function Profile() {
 
   return (
     <>
-      <Card>
+      <Card className="container-profile">
         <Card.Body>
           <h2 className="text-center mb-4">Profile</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <strong>Email: </strong> {currentUser.email}
-          <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
+          <Link to="/update-profile" className="btn btn-primary w-30 mt-3 btn-one">
             Update Profile
           </Link>
         </Card.Body>
       </Card>
-      <div className="text-center w-100 mt-2">
+      {/* <div className="text-center w-100 mt-2">
         <Button variant="link" onClick={handleLogOut}>
           Log Out
         </Button>
-      </div>
+      </div> */}
     </>
   );
 }

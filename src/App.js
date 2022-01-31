@@ -9,26 +9,27 @@ import { Navigate } from "react-router-dom";
 import PrivateRoute from "./utils/privateRoute";
 // import PublicRoute from "./utils/privateRoute";
 import ForgetPassword from "./pages/forgetpassword";
+import Footer from "./components/footer";
+import NavBar from "./components/header";
 
 function App() {
   return (
-    <Container
-      className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}
-    >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
-        <Router>
-          <Routes>
-            <Route exact path="/" element={<Home/>} />
-            <Route path="/profile" element={<PrivateRoute component={Profile} />}></Route>
-            <Route exact path="/signup" element={<SignUp/>} />
-            <Route exact path="/login" element={<Login/>} />
-            <Route path="/forget-password" element={<PrivateRoute component={ForgetPassword} />}></Route>
-          </Routes>
-        </Router>
+      <div className="page-cont">
+        <div className="content">
+          <Router>
+          <NavBar />
+            <Routes>
+              <Route exact path="/" element={<Home/>} />
+              <Route path="/profile" element={<PrivateRoute component={Profile} />}></Route>
+              <Route exact path="/signup" element={<SignUp/>} />
+              <Route exact path="/login" element={<Login/>} />
+              <Route path="/forget-password" element={<PrivateRoute component={ForgetPassword} />}></Route>
+            </Routes>
+          </Router>
+        </div>
+        <Footer/>
       </div>
-    </Container>
-  );
+    );
 }
 
 export default App;
