@@ -1,11 +1,22 @@
-import React from 'react';
-import { Navigate, Outlet } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { useAuth } from  "../context/authContext";
 
-const PrivateRoute = () => {
-    const auth = null; // determine if authorized, from context or however you're doing it
+function PrivateRoute({ component: Component }, props) {
+  const [loading, setLoading] = useState(true);
 
-    // If authorized, return an outlet that will render child elements
-    // If not, return element that will navigate to login page
-    return auth ? <Outlet /> : <Navigate to="/login" />;
+  const { currentUser } = useAuth();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (currentUser) {
+      setLoading(false);
+      return;
+    }
+    navigate("/login");
+  }, []);
+
+  return <>{loading ? "Loading..." : <Component {...props} />} </>;
 }
 
+export default PrivateRoute;

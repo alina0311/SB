@@ -23,11 +23,7 @@ function Home() {
       <div className="text-center w-100 mt-2">
         <p>Welcome!</p>
       </div>
-      <div className="text-center w-100 mt-2">
-        <Button variant="link" onClick={handleLogOut}>
-          Log Out
-        </Button>
-      </div>
+    
     </>
   );
 }
