@@ -31,8 +31,8 @@
 	padding-left: 3rem;
 	padding-right: 3rem;
 	position:absolute;
-    margin-left:  33%;
-    margin-top:  20%;
+    margin-left:  -20%;
+    margin-top: 25%;
 	
 }
 
@@ -48,3 +48,8 @@
 	justify-content:center;
 }
 
+.logout-button {
+	left: 100%;
+	top: -19rem;
+
+}

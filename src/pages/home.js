@@ -23,15 +23,27 @@ function Home() {
   };
 
   return (
-    <div className="alldiv home-cont"> 
-      <div className="left">
-        <p className="question">
-              ARE YOU READY TO HAVE FUN?
-        </p>
-        <Button href="#"></Button> <Button type="submit">LET'S START</Button>{' '}
-      </div>
-      
-    </div>
+    <>
+      <Card>
+        <Card.Body>
+          <div className="alldiv home-cont"> 
+            <div className="left">
+              <p className="question">
+                    ARE YOU READY TO HAVE FUN?
+              </p>
+              <Button type="submit" className="btn">LET'S START</Button>
+              {/* <Card>
+                <Card.Body>
+                  <Button className="logout-button" variant="link" onClick={handleLogOut}>
+                    Log Out
+                  </Button>
+                </Card.Body>
+              </Card> */}
+            </div>
+          </div>
+        </Card.Body>
+      </Card>
+    </>
   );
 }
 
