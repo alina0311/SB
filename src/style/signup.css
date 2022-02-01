@@ -10,10 +10,11 @@
 	z-index:2;
 }
 
-
-.update-profile {
-	width: 30%;
-    margin-left: 47%;
+.signup-card {
+    width: 30%;
+    margin-left: 36%;
 }
 
-
+.signup-btn {
+	margin-left: -5%;
+}

@@ -22,14 +22,19 @@ function Profile() {
 
   return (
     <>
-      <Card className="container-profile">
+      <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Profile</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <strong>Email: </strong> {currentUser.email}
-          <Link to="/update-profile" className="btn btn-primary w-30 mt-3 btn-one">
-            Update Profile
-          </Link>
+          <div className="alldiv"> 
+            <h2 className="text-center mb-4">Profile</h2>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <strong>Email: </strong> {currentUser.email}
+            <div className="update-profile">
+              <Link to="/update-profile" className="btn btn-primary w-30 mt-3">
+                Update Profile
+              </Link>
+            </div>
+            
+          </div>
         </Card.Body>
       </Card>
       {/* <div className="text-center w-100 mt-2">
