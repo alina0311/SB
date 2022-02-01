@@ -23,6 +23,14 @@ const NavBar = () => {
         }
     };
 
+    // useEffect(() => {
+    //     if (currentUser) {
+    //     setLoading(false);
+    //     return;
+    //     }
+    //     navigate("/login");
+    // }, []);
+
     return(
         <div className="nav-container">
             <ReactBootStrap.Navbar collapseOnSelect expand="xl" variant="light" className='colorednav'>
