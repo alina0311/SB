@@ -1,7 +1,7 @@
 import React from "react";
 import "../style/all.css";
 import '../style/boardgame.css';
-import { Card, Button, Alert, Container, Col} from "react-bootstrap";
+import { Card, ListGroup, ListGroupItem, Col} from "react-bootstrap";
 
 import img1 from '../images/alias.jpg';
 import img2 from '../images/azul-mozaicul.jpg';
@@ -31,7 +31,7 @@ function Boardgame(props) {
   return (
     <Col>
       <Card className="bg-card">
-        <Card.Title>{props.image_title}</Card.Title>
+        <Card.Header>{props.image_title}</Card.Header>
         <Card.Img src=
           {(() => {
               if (props.image_title == 'Alias Party')
@@ -72,14 +72,18 @@ function Boardgame(props) {
                   return img18
               if (props.image_title == 'Wingspan')
                   return img19
-              if (props.image_title == 'Youtube Masters')
+              if (props.image_title == 'Go Masters: Youtubers')
                   return img20
           })()}/>
-        <Card.Body>
-        
-      
-        <Card.Text>hii</Card.Text>
-        </Card.Body>
+
+      <ListGroup>
+          <ListGroupItem>Year: {props.year}</ListGroupItem>
+          <ListGroupItem>Duration: {props.duration}</ListGroupItem>
+          <ListGroupItem>Theme: {props.theme}</ListGroupItem>
+          <ListGroupItem>Mechanics: {props.mechanics}</ListGroupItem>
+          <ListGroupItem>Number of players: {props.no_players}</ListGroupItem>
+          <ListGroupItem>Rating: {props.rating}</ListGroupItem>
+        </ListGroup>
         
       </Card>
     </Col>
