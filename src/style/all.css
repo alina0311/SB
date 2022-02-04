@@ -14,3 +14,11 @@
 .toLeft {
     margin-left: 5%;
 }
+
+ul {
+    list-style-type: none;
+}
+
+.div-collection {
+    height:320vh;
+}
