@@ -7,7 +7,7 @@ import {
   } from "react-router-dom";
 import { useAuth } from "../context/authContext";
 import '../style/navbar.css';
-import '../style/all.css';
+
 
 const NavBar = () => {
     const [error, setError] = useState("");

@@ -48,7 +48,7 @@ function Login() {
                     ref={passwordRef}
                   ></Form.Control>
                 </Form.Group>
-                <Button type="submit" className="text-center w-80 login" disabled={loading}>
+                <Button type="submit" className="text-center login" disabled={loading}>
                   Log In
                 </Button>
               </Form>

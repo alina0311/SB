@@ -4,11 +4,12 @@
 }
 
 .hi-text {
-    margin-left: 18%;
+    margin-left: 2%;
 
 }
 
 .logout-button {
-    margin-top: -20%;
-    height: 2rem;
+	left: 55%;
+	top: -19rem;
+    text-decoration: none;
 }

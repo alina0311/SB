@@ -31,14 +31,22 @@ function Home() {
               <p className="question">
                     ARE YOU READY TO HAVE FUN?
               </p>
-              <Button type="submit" className="btn">LET'S START</Button>
-              {/* <Card>
-                <Card.Body>
-                  <Button className="logout-button" variant="link" onClick={handleLogOut}>
-                    Log Out
+              {
+                currentUser 
+                ? 
+                <Link to="/signup" className="btn-start">
+                  <Button>
+                    LET'S START
                   </Button>
-                </Card.Body>
-              </Card> */}
+                </Link>
+                :
+                <Link to="/collection" className="btn-start">
+                  <Button>
+                    LET'S START
+                  </Button>
+                </Link>
+              }
+             
             </div>
           </div>
         </Card.Body>

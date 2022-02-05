@@ -5,8 +5,8 @@
 	margin-left: 0rem;
     margin-top: -0.5rem;
 	width: 100%;
-	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),  url(../images/home-bg.jpg);
-	height: 100vh;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),  url(../images/home-bg2.jpg);
+	height: 110vh;
 	background-size: cover;
 	background-position: 50% 80%;
 	background-repeat:no-repeat;
@@ -18,21 +18,37 @@
 
 .btn
 {
-	padding: 0.2rem 0.2rem;
+	padding: 1rem 1rem;
 	color: white;
 	text-decoration:none;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	text-transform:uppercase;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width:13rem;
+	width:12rem;
     height: 4rem;
-	padding-left: 3rem;
-	padding-right: 3rem;
 	position:absolute;
-    margin-left:  -20%;
+    margin-left:  28%;
     margin-top: 25%;
+	
+}
+
+.btn-start
+{
+	padding: 1rem 1rem;
+	color: white;
+	text-decoration:none;
+	font-size: 1.3rem;
+	text-transform:uppercase;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width:12rem;
+    height: 4rem;
+	position:absolute;
+    margin-left:  38%;
+    margin-top: 20%;
 	
 }
 
@@ -44,12 +60,8 @@
 	font-size: 3rem;
 	position:absolute;
 	top: 40%;
-	left: 10%;
+	left: 20%;
 	justify-content:center;
 }
 
-.logout-button {
-	left: 100%;
-	top: -19rem;
 
-}
