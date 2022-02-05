@@ -1,10 +1,11 @@
 .bg-image {
-    width: 15rem;
-    height: 15rem;
+    width: 12rem;
+    height: 12rem;
 }
 
 .bg-card{
-    width: 22rem;
-    height: 29rem;
+    width: 18rem;
+    height: 25rem;
     margin-bottom: 17rem;
+    margin-left: 2rem;
 }

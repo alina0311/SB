@@ -22,6 +22,7 @@ function App() {
           <NavBar />
             <Routes>
               <Route exact path="/" element={<Home/>} />
+              <Route exact path="/home" element={<Home/>} />
               <Route path="/profile" element={<PrivateRoute component={Profile} />}></Route>
               <Route path="/collection" element={<PrivateRoute component={Collection} />}></Route>
               <Route exact path="/signup" element={<SignUp/>} />

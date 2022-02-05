@@ -20,5 +20,9 @@ ul {
 }
 
 .div-collection {
-    height:580vh;
+    height:830vh;
+}
+
+.links {
+    text-decoration: none;
 }

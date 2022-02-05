@@ -6,7 +6,8 @@ import {
     BrowserRouter as Router,
   } from "react-router-dom";
 import { useAuth } from "../context/authContext";
-import '../style/navbar.css'
+import '../style/navbar.css';
+import '../style/all.css';
 
 const NavBar = () => {
     const [error, setError] = useState("");
@@ -33,35 +34,61 @@ const NavBar = () => {
 
     return(
         <div className="nav-container">
-            <ReactBootStrap.Navbar collapseOnSelect expand="xl" variant="light" className='colorednav'>
-                <ReactBootStrap.Navbar.Brand className='toLeft'>THE BOARD GAMES SHELF</ReactBootStrap.Navbar.Brand>
-                <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
-                
-                <ReactBootStrap.Button className="logout-button" variant="link" onClick={handleLogOut}>
-                            Log Out
-                </ReactBootStrap.Button>
-        
-                <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
-                    <ReactBootStrap.Nav className="mr-auto"> 
-                        <Link to="/profile">
-                        <ReactBootStrap.Nav.Link href="#profile">Profile</ReactBootStrap.Nav.Link>
-                        </Link>
-
-                        <ReactBootStrap.NavDropdown title="Our boardgames" id="collasible-nav-dropdown">
-                            <ReactBootStrap.NavDropdown.Item href="#action/3.1">Collection</ReactBootStrap.NavDropdown.Item>
-                            <ReactBootStrap.NavDropdown.Item href="#action/3.2">Reviews</ReactBootStrap.NavDropdown.Item>
-                            <ReactBootStrap.NavDropdown.Divider />
-                            <ReactBootStrap.NavDropdown.Item href="#action/3.3">Find more</ReactBootStrap.NavDropdown.Item>
-                        </ReactBootStrap.NavDropdown>
-
-                       
-                       
-                    </ReactBootStrap.Nav>
-
+            { 
+                currentUser 
+                ? 
+                <ReactBootStrap.Navbar collapseOnSelect expand="xl" variant="light" className='colorednav'>
+                    <ReactBootStrap.Navbar.Brand className='toLeft'>THE BOARD GAMES SHELF</ReactBootStrap.Navbar.Brand>
+                    <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     
+                    <ReactBootStrap.Button className="logout-button" variant="link" onClick={handleLogOut}>
+                                Log Out
+                    </ReactBootStrap.Button>
                     
-                </ReactBootStrap.Navbar.Collapse>
-            </ReactBootStrap.Navbar>
+                    <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+                        <ReactBootStrap.Nav className="mr-auto"> 
+                            <Link to="/home" className="links">
+                                <ReactBootStrap.Nav.Link href="#home">Home</ReactBootStrap.Nav.Link>
+                            </Link>
+                            <Link to="/profile" className="links">
+                                <ReactBootStrap.Nav.Link href="#profile">Profile</ReactBootStrap.Nav.Link>
+                            </Link>
+                            <ReactBootStrap.NavDropdown title="Boardgames" id="collasible-nav-dropdown">
+                                <ReactBootStrap.NavDropdown.Item href="#collection">
+                                    <Link to="/collection" className="links">
+                                        <ReactBootStrap.Nav.Link href="#collection">Collection
+                                        </ReactBootStrap.Nav.Link>
+                                    </Link>
+                                </ReactBootStrap.NavDropdown.Item>
+                                <ReactBootStrap.NavDropdown.Divider />
+                                <ReactBootStrap.NavDropdown.Item href="https://boardgamegeek.com/">Find more</ReactBootStrap.NavDropdown.Item>
+                            </ReactBootStrap.NavDropdown>
+                            
+                        </ReactBootStrap.Nav>
+                    </ReactBootStrap.Navbar.Collapse>
+                    <ReactBootStrap.Navbar.Text className="hi-text">Hi, {currentUser.email}</ReactBootStrap.Navbar.Text>
+                </ReactBootStrap.Navbar>
+                :
+                <ReactBootStrap.Navbar collapseOnSelect expand="xl" variant="light" className='colorednav'>
+                    <ReactBootStrap.Navbar.Brand className='toLeft'>THE BOARD GAMES SHELF</ReactBootStrap.Navbar.Brand>
+                    <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    
+                    <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+                        <ReactBootStrap.Nav className="mr-auto"> 
+                            <Link to="/home" className="links">
+                                <ReactBootStrap.Nav.Link href="#home">Home</ReactBootStrap.Nav.Link>
+                            </Link>
+                            <ReactBootStrap.NavDropdown title="Boardgames" id="collasible-nav-dropdown">
+                                <ReactBootStrap.NavDropdown.Item href="https://boardgamegeek.com/">Find more</ReactBootStrap.NavDropdown.Item>
+                            </ReactBootStrap.NavDropdown>
+                        </ReactBootStrap.Nav>
+                        
+                    </ReactBootStrap.Navbar.Collapse>
+                   
+                </ReactBootStrap.Navbar>
+            
+            }
+            
            
         </div>
     )

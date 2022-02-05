@@ -3,6 +3,12 @@
     font-weight: bold;
 }
 
-/* .logout-button {
-    top: -80%;
-} */
+.hi-text {
+    margin-left: 18%;
+
+}
+
+.logout-button {
+    margin-top: -20%;
+    height: 2rem;
+}

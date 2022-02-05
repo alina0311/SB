@@ -7,7 +7,7 @@ import img1 from '../images/alias.jpg';
 import img2 from '../images/azul-mozaicul.jpg';
 import img3 from '../images/azul.jpg';
 import img4 from '../images/carcassonne.jpg';
-import img5 from '../images/catan.jpg';
+import img5 from '../images/catan.png';
 import img6 from '../images/dixit.jpg';
 import img7 from '../images/exploding-kittens.jpg';
 import img8 from '../images/monopoly-deal.jpg';
