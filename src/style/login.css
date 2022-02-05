@@ -10,8 +10,28 @@
 	z-index:2;
 }
 
+.login-cont {
+    margin-bottom:0rem;
+	margin-left: 0rem;
+    margin-top: -0.5rem;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),  url(../images/bg-4.jpg);
+	height: 110vh;
+	background-size: cover;
+	background-position: 50% 80%;
+	background-repeat:no-repeat;
+	justify-content:center;
+	text-align:center;
+	font-weight:bold;
+	z-index:2;
+}
+
+
 .login-card {
     width: 30%;
+	height: 27rem;
+	left: 0%;
+	top: 6%;
     margin-left: 36%;
 	text-align:left;
 }

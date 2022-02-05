@@ -30,41 +30,46 @@ function Login() {
     <>
       <Card>
         <Card.Body>
-        <div className="alldiv"> 
-          <h2 className="text-center mb-4">Log In</h2>
-          {error && <Alert variant="danger">{error}</Alert>}
-          <Card className="login-card ">
-            <Card.Body>
-              <Form onSubmit={handleSubmit}>
-                <Form.Group id="email">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" required ref={emailRef}></Form.Control>
-                </Form.Group>
-                <Form.Group id="password">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control
-                    type="password"
-                    required
-                    ref={passwordRef}
-                  ></Form.Control>
-                </Form.Group>
-                <Button type="submit" className="text-center login" disabled={loading}>
-                  Log In
-                </Button>
-              </Form>
-              <div className="text-center w-100 mt-3">
-                <Link to="/forget-password">Forget password?</Link>
-             </div>
-             
-            </Card.Body>
-          </Card>
-          <div className="text-center w-100 mt-2">
-            Not registered yet? <Link to="/signup">Sign Up</Link>
-          </div>
+        <div className="login-cont"> 
+          <Card className="login-card">
+              <Card.Header >
+                LOG IN
+              </Card.Header>
+          <Card.Body>
+            {error && <Alert variant="danger">{error}</Alert>}
+            <Card>
+              <Card.Body>
+                <Form onSubmit={handleSubmit}>
+                  <Form.Group id="email">
+                    <Form.Label>Email</Form.Label>
+                    <Form.Control type="email" required ref={emailRef}></Form.Control>
+                  </Form.Group>
+                  <Form.Group id="password">
+                    <Form.Label>Password</Form.Label>
+                    <Form.Control
+                      type="password"
+                      required
+                      ref={passwordRef}
+                    ></Form.Control>
+                  </Form.Group>
+                  <Button type="submit" className="text-center login" disabled={loading}>
+                    Log In
+                  </Button>
+                </Form>
+              </Card.Body>
+            </Card>
             
+            <div className="text-center w-100 mt-3">
+              <Link to="/forget-password">Forget password?</Link>
+            </div>
+            <div className="text-center w-100 mt-2">
+              Not registered yet? <Link to="/signup">Sign Up</Link>
+            </div>
+          </Card.Body>
+         </Card>
         </div>
-        </Card.Body>
-      </Card>
+      </Card.Body>
+    </Card>
       
     </>
   );

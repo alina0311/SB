@@ -29,12 +29,12 @@ function Profile() {
             <Card.Header>
               Profile
             </Card.Header>
-          <Card.Body>
+            <Card.Body>
               
-            {error && <Alert variant="danger">{error}</Alert>}
-            <strong>Email: </strong> {currentUser.email}
-              <Link to="/update-profile" className="btn btn-primary w-30 mt-3 update-profile">
-                Update Profile
+              {error && <Alert variant="danger">{error}</Alert>}
+              <strong>Email: </strong> {currentUser.email}
+              <Link to="/update-profile" className="update-profile">
+                <Button>Update Profile</Button>
               </Link>
             </Card.Body>
           </Card>

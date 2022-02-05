@@ -34,10 +34,14 @@ function Signup() {
     <>
       <Card>
         <Card.Body>
-          <div className="alldiv">
-            <h2 className="text-center mb-4">Sign Up</h2>
+          <div className="signup-cont">
+          <Card className="signup-card">
+              <Card.Header >
+                SIGN UP
+              </Card.Header>
+          <Card.Body>
             {error && <Alert variant="danger">{error}</Alert>}
-            <Card className="login-card ">
+            <Card>
               <Card.Body>
                 <Form onSubmit={handleSubmit}>
                   <Form.Group id="email">
@@ -69,6 +73,8 @@ function Signup() {
             <div className="text-center w-100 mt-2">
               Already have an account? <Link to="/login">Log In</Link>
             </div>
+            </Card.Body>
+          </Card>
           </div>
         </Card.Body>
       </Card>
