@@ -27,7 +27,7 @@ function App() {
               <Route path="/collection" element={<PrivateRoute component={Collection} />}></Route>
               <Route exact path="/signup" element={<SignUp/>} />
               <Route exact path="/login" element={<Login/>} />
-              <Route path="/forget-password" element={<PrivateRoute component={ForgetPassword} />}></Route>
+              <Route path="/forget-password" element={<ForgetPassword/>} />
               <Route path="*" element={<NotFoundPage/>} />
             </Routes>
           </Router>
