@@ -33,9 +33,9 @@ function Profile() {
               
               {error && <Alert variant="danger">{error}</Alert>}
               <strong>Email: </strong> {currentUser.email}
-              <Link to="/update-profile" className="update-profile">
+              {/* <Link to="/update-profile" className="update-profile">
                 <Button>Update Profile</Button>
-              </Link>
+              </Link> */}
             </Card.Body>
           </Card>
            

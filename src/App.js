@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import SignUp from "./pages/signup";
-import { Container } from "react-bootstrap";
 import Profile from "./pages/profile";
 import Home from "./pages/home";
 import Login from "./pages/login";
@@ -12,8 +11,6 @@ import ForgetPassword from "./pages/forgetpassword";
 import Footer from "./components/footer";
 import NavBar from "./components/header";
 import NotFoundPage from "./pages/notFound";
-import Favorites from "./pages/favorites";
-
 
 function App() {
   return (
