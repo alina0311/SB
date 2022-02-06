@@ -53,6 +53,7 @@ const NavBar = () => {
                             <Link to="/profile" className="links">
                                 <ReactBootStrap.Nav.Link href="#profile">Profile</ReactBootStrap.Nav.Link>
                             </Link>
+          
                             <ReactBootStrap.NavDropdown title="Boardgames" id="collasible-nav-dropdown">
                                 <ReactBootStrap.NavDropdown.Item href="#collection">
                                     <Link to="/collection" className="links">

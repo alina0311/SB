@@ -6,23 +6,17 @@ import "../components/boardgame";
 import CollectionList from "../components/collectionList";
 import Search from "../components/search";
 import boardgames from "../components/data";
+
+
 import '../style/all.css';
 
 
 function Collection() {
+
   const [error, setError] = useState("");
   const { currentUser, logout } = useAuth();
   const history = useNavigate();
 
-  const handleLogOut = async () => {
-    setError("");
-    try {
-      await logout();
-      history("/login");
-    } catch (error) {
-      setError("cannot logout");
-    }
-  };
 
   return (
     <div className="div-collection">

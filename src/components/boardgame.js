@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useContext}  from "react";
 import "../style/all.css";
 import '../style/boardgame.css';
 import { Card, ListGroup, ListGroupItem, Col} from "react-bootstrap";
+import { useAuth } from "../context/authContext";
 
 import img1 from '../images/alias.jpg';
 import img2 from '../images/azul-mozaicul.jpg';
@@ -27,7 +28,9 @@ import img20 from '../images/youtube-masters.jpg';
 
 function Boardgame(props) {
   var img = '';
+  const { currentUser, logout } = useAuth();
 
+  
   return (
     <Col>
       <Card className="bg-card">

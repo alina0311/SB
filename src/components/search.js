@@ -41,7 +41,7 @@ function Search({ boardgames }) {
           />
        
         </div>
-        {searchList()}
+         {searchList()}
       </div>
     </>
       

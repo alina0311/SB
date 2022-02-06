@@ -8,10 +8,10 @@ import Collection from "./pages/collection";
 import { BrowserRouter as Router, Route, Switch, Routes} from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import PrivateRoute from "./utils/privateRoute";
-// import PublicRoute from "./utils/privateRoute";
 import ForgetPassword from "./pages/forgetpassword";
 import Footer from "./components/footer";
 import NavBar from "./components/header";
+import NotFoundPage from "./pages/notFound";
 
 
 function App() {
@@ -28,6 +28,7 @@ function App() {
               <Route exact path="/signup" element={<SignUp/>} />
               <Route exact path="/login" element={<Login/>} />
               <Route path="/forget-password" element={<PrivateRoute component={ForgetPassword} />}></Route>
+              <Route path="*" element={<NotFoundPage/>} />
             </Routes>
           </Router>
         </div>
