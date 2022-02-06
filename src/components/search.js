@@ -12,7 +12,15 @@ function Search({ boardgames }) {
         boardgame
         .image_title
         .toLowerCase()
-        .includes(searchField.toLowerCase()) 
+        .includes(searchField.toLowerCase()) ||
+        boardgame
+        .theme
+        .toLowerCase()
+        .includes(searchField.toLowerCase()) ||
+        boardgame
+        .mechanics
+        .toLowerCase()
+        .includes(searchField.toLowerCase())
       );
     }
   );
