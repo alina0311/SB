@@ -1,4 +1,3 @@
-
 const boardgames = [
     {
       id: '1',

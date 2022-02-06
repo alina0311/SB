@@ -1,9 +1,7 @@
-import React, {useContext}  from "react";
+import React  from "react";
+import { Card, ListGroup, ListGroupItem, Col} from "react-bootstrap";
 import "../style/all.css";
 import '../style/boardgame.css';
-import { Card, ListGroup, ListGroupItem, Col} from "react-bootstrap";
-import { useAuth } from "../context/authContext";
-
 import img1 from '../images/alias.jpg';
 import img2 from '../images/azul-mozaicul.jpg';
 import img3 from '../images/azul.jpg';
@@ -27,10 +25,6 @@ import img20 from '../images/youtube-masters.jpg';
 
 
 function Boardgame(props) {
-  var img = '';
-  const { currentUser, logout } = useAuth();
-
-  
   return (
     <Col>
       <Card className="bg-card">
@@ -79,15 +73,15 @@ function Boardgame(props) {
                   return img20
           })()}/>
 
-      <ListGroup>
+       <ListGroup>
           <ListGroupItem>Year: {props.year}</ListGroupItem>
           <ListGroupItem>Duration: {props.duration}</ListGroupItem>
           <ListGroupItem>Theme: {props.theme}</ListGroupItem>
           <ListGroupItem>Mechanics: {props.mechanics}</ListGroupItem>
           <ListGroupItem>Number of players: {props.no_players}</ListGroupItem>
           <ListGroupItem>Rating: {props.rating}</ListGroupItem>
-        </ListGroup>
-        
+       </ListGroup>
+
       </Card>
     </Col>
   );

@@ -12,6 +12,7 @@ import ForgetPassword from "./pages/forgetpassword";
 import Footer from "./components/footer";
 import NavBar from "./components/header";
 import NotFoundPage from "./pages/notFound";
+import Favorites from "./pages/favorites";
 
 
 function App() {

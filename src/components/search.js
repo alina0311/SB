@@ -31,9 +31,7 @@ function Search({ boardgames }) {
 
   function searchList() {
     return (
-
         <CollectionList filteredBoardgames={filteredBoardgames} />
-
     );
   }
 

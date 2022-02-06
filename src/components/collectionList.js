@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/all.css";
-import { Card, Button, Alert, Container, Row, Col } from "react-bootstrap";
+import {Container, Row } from "react-bootstrap";
 import Boardgame from "./boardgame";
 
 

@@ -32,34 +32,34 @@ function Login() {
         <Card.Body>
           <div className="forget-cont"> 
             <Card className="forget-card">
-                <Card.Header >
-                  RESET PASSWORD
-                </Card.Header>
-            <Card.Body>
-            {error && <Alert variant="danger">{error}</Alert>}
-            {message && <Alert variant="success">{message}</Alert>}
-            <Card>
-                <Card.Body>
-                  <Form onSubmit={handleSubmit}>
-                    <Form.Group id="email">
-                      <Form.Label>Email</Form.Label>
-                      <Form.Control type="email" required ref={emailRef}></Form.Control>
-                    </Form.Group>
-                    <Button type="submit" className="w-100 forget" disabled={loading}>
-                      Reset password
-                    </Button>
-                  </Form>
-                </Card.Body>
+              <Card.Header >
+                RESET PASSWORD
+              </Card.Header>
+              <Card.Body>
+                {error && <Alert variant="danger">{error}</Alert>}
+                {message && <Alert variant="success">{message}</Alert>}
+                <Card>
+                    <Card.Body>
+                      <Form onSubmit={handleSubmit}>
+                        <Form.Group id="email">
+                          <Form.Label>Email</Form.Label>
+                          <Form.Control type="email" required ref={emailRef}></Form.Control>
+                        </Form.Group>
+                        <Button type="submit" className="w-100 forget" disabled={loading}>
+                          Reset password
+                        </Button>
+                      </Form>
+                    </Card.Body>
+                </Card>
+                <div className="text-center w-100 mt-3">
+                  <Link to="/login">Log In</Link>
+                </div>
+             </Card.Body>
             </Card>
-            <div className="text-center w-100 mt-3">
-              <Link to="/login">Log In</Link>
+            <div className="text-center w-100 mt-2">
+              Not registered yet? <Link to="/signup">Sign Up</Link>
             </div>
-          </Card.Body>
-        </Card>
-        <div className="text-center w-100 mt-2">
-          Not registered yet? <Link to="/signup">Sign Up</Link>
-        </div>
-        </div>
+         </div>
       </Card.Body>
     </Card>
     </>

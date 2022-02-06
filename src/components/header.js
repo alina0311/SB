@@ -24,14 +24,6 @@ const NavBar = () => {
         }
     };
 
-    // useEffect(() => {
-    //     if (currentUser) {
-    //     setLoading(false);
-    //     return;
-    //     }
-    //     navigate("/login");
-    // }, []);
-
     return(
         <div className="nav-container">
             { 
@@ -87,10 +79,8 @@ const NavBar = () => {
                     </ReactBootStrap.Navbar.Collapse>
                    
                 </ReactBootStrap.Navbar>
-            
             }
-            
-           
+        
         </div>
     )
 }

@@ -7,7 +7,7 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   function signup(email, password) {
-    return auth.createUserWithEmailAndPassword(email, password); // return a promise
+    return auth.createUserWithEmailAndPassword(email, password); 
   }
 
   const login = (email, password) => {
@@ -24,7 +24,6 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
-      // added event listener
       setCurrentUser(user);
       setLoading(false);
     });
