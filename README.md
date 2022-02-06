@@ -16,6 +16,7 @@ This project is a website about Board Games created using **React**.
 ## Authentification
 For this, **Firebase** was used.
 
+## Reusability
 The following are **reusable components**:
 - Header (Navbar)
 - Footer
