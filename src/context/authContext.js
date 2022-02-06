@@ -22,6 +22,15 @@ export function AuthProvider({ children }) {
     return auth.sendPasswordResetEmail(email);
   };
 
+  // const editEmail = (currentPassword, newEmail) => {
+  //   this.reauthenticate(currentPassword).then(() => {
+  //     var user = firebase.auth().currentUser;
+  //     user.updateEmail(newEmail).then(() => {
+  //       console.log("Email updated!");
+  //     }).catch((error) => { console.log(error); });
+  //   }).catch((error) => { console.log(error); });
+  // }
+
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
       // added event listener

@@ -4,12 +4,12 @@ import { Card, Button, Alert, Container, Row, Col } from "react-bootstrap";
 import Boardgame from "./boardgame";
 
 
-function CollectionList(props) {
+function CollectionList({filteredBoardgames}) {
   return (
     <Container>
       <Row xs={1} md={3}>
       
-        {props.boardgames.map((boardgame) => (
+        {filteredBoardgames.map((boardgame) => (
             <Boardgame
                 key={boardgame.id}
                 id={boardgame.id}
